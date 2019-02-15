@@ -1,0 +1,5 @@
+spawn ssh [lindex $argv 0]@[lindex $argv 1]
+
+expect "?assword" { send [lindex $argv 2]\r}
+
+interact
