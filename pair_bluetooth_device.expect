@@ -2,6 +2,10 @@ set timeout 30
 spawn bluetoothctl
 expect "# "
 send "agent on\r"
+
+expect "Agent registered"
+send "\r"
+
 expect "# "
 send "default-agent\r"
 expect "(yes/no)"
