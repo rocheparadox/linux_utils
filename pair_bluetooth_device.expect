@@ -1,0 +1,15 @@
+set timeout 30
+spawn bluetoothctl
+expect "# "
+send "default-agent\r"
+expect "(yes/no)"
+send "yes\r"
+expect "(yes/no)"
+send "yes\r"
+expect "(yes/no)"
+send "yes\r"
+expect "# "
+send "exit\r"
+
+
+
