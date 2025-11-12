@@ -1,6 +1,12 @@
 #!/bin/bash
 
 activate_scripts=$(find . | grep "bin/activate$")
+while [ -z $activate_scripts ]; do
+	cd ..
+	echo "Traversed to $(pwd)"
+	activate_scripts=$(find . | grep "bin/activate$")
+done
+
 
 scripts=($activate_scripts)
 
